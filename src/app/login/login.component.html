@@ -1,0 +1,18 @@
+<div class="page">
+  <div class="login-box crm-flex crm-flex-column">
+    <div
+      class="title crm-flex crm-justify-content-center crm-align-items-center"
+    >
+      CRM TOOL
+    </div>
+    <div class="login-input crm-flex crm-flex-column">
+      <input type="text" placeholder="Tên đăng nhập" [(ngModel)]="username" />
+      <input type="password" placeholder="Mật khẩu" [(ngModel)]="password" />
+      <div
+        class="login-button crm-flex crm-justify-content-center crm-align-items-center"
+      >
+        <div class="login-button-content" (click)="login()">ĐĂNG NHẬP</div>
+      </div>
+    </div>
+  </div>
+</div>

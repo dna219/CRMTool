@@ -1,0 +1,25 @@
+<div class="crm-flex crm-flex-row">
+  <div class="left-pane">
+    <div class="title" (click)="showCalendar($event)">2019</div>
+    <div class="crm-flex crm-flex-column crm-justify-content-center">
+      <div class="item" *ngFor="let item of monthOfYear">
+        {{ item | uppercase }}
+      </div>
+    </div>
+  </div>
+  <div class="content crm-flex crm-flex-column" *ngIf="isShowCalendar">
+    <work-off (dayRespond)="receiveDay($event)"></work-off>
+  </div>
+  <div class="crm-flex crm-flex-column right-pane">
+    <div class="crm-flex crm-flex-column" style="height:400px">
+      <div>{{ data }}</div>
+      <div class="crm-flex crm-flex-row">
+        <div class="btn-click primary">S</div>
+        <div class="btn-click secondary">C</div>
+        <div class="btn-click red">N</div>
+      </div>
+    </div>
+
+    <work-report [thisDate]="data"></work-report>
+  </div>
+</div>

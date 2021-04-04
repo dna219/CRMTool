@@ -1,0 +1,61 @@
+@import "../../../assets/color";
+
+.page {
+  width: 100%;
+}
+.work-card {
+  margin: auto auto;
+  // border-radius: 10px;
+  // border: 1px solid #ccc;
+}
+
+.work-report {
+  flex-grow: 1;
+  padding: 5px 15px;
+  border: 1px solid #ccc;
+
+  .heading-number {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    color: #f9f9f9;
+    font-size: 12px;
+    background: $app-color;
+    margin: 0 1px;
+    cursor: pointer;
+  }
+  input {
+    height: 24px;
+    margin: 10px 5px;
+    border: 0;
+    // border-bottom: 1px solid #ccc;
+    outline: 0;
+  }
+  .item {
+    width: 150px;
+    padding: 0 10px;
+  }
+  .duration {
+    width: 60px;
+    text-align: center;
+  }
+  .pbi {
+    width: 60px;
+    text-align: center;
+  }
+}
+
+.send-work {
+  min-width: 100px;
+  background: #6fb555;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: #f9f9f9;
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+
+  &:hover {
+    background: #6fb555d5;
+  }
+}

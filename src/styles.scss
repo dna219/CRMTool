@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.crm-flex {
+  display: flex;
+}
+
+.crm-flex-row {
+  flex-direction: row;
+}
+
+.crm-flex-column {
+  flex-direction: column;
+}
+
+.crm-justify-content-center {
+  justify-content: center;
+}
+
+.crm-align-items-center {
+  align-items: center;
+}
+
+.btn-click {
+  // border-radius: 20px;
+  padding: 2px 4px;
+  width: 12px;
+  height: 16px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  margin: 10px 5px;
+  line-height: 16px;
+  cursor: pointer;
+  &.primary {
+    background: #337ab7;
+  }
+  &.red {
+    background: #e6534d;
+  }
+  &.secondary {
+    background: #34a853;
+  }
+}

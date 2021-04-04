@@ -1,0 +1,48 @@
+<div class="page crm-flex crm-justify-content-center">
+  <div class="work-card crm-flex crm-flex-row">
+    <div class="crm-flex crm-flex-column">
+      <div
+        class="work-report crm-flex crm-flex-row crm-align-items-center"
+        *ngFor="let item of listOfWork; first as first; last as last"
+      >
+        <div
+          class="heading-number crm-flex crm-align-items-center crm-justify-content-center"
+          (click)="addItem()"
+        >
+          +
+        </div>
+        <div
+          *ngIf="!first && last"
+          class="heading-number crm-flex crm-align-items-center crm-justify-content-center"
+          (click)="removeItem()"
+        >
+          -
+        </div>
+        <textarea
+          class="item"
+          placeholder="Công việc"
+          [(ngModel)]="item.WorkItem"
+        >
+        </textarea>
+        <input
+          type="number"
+          class="duration"
+          placeholder="Số giờ"
+          [(ngModel)]="item.Duration"
+        />
+        <input
+          type="text"
+          class="pbi"
+          placeholder="PBI"
+          [(ngModel)]="item.PbiNo"
+        />
+      </div>
+    </div>
+    <div
+      class="send-work crm-flex crm-align-items-center crm-justify-content-center"
+      (click)="sendData($event)"
+    >
+      Gửi
+    </div>
+  </div>
+</div>

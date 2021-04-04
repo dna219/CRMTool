@@ -1,0 +1,49 @@
+<div class="toolbar crm-flex crm-flex-row crm-align-items-center">
+  <div class="item" (click)="viewWeek()">Tuần</div>
+  <div class="item" (click)="viewMonth()">Tháng</div>
+</div>
+
+<div class="crm-flex crm-align-items-center crm-flex-column">
+  <div class="month">Tháng {{ thisMonth }}</div>
+  <div class="calendar crm-flex crm-flex-row crm-justify-content-center">
+    <div
+      class="dayofweek crm-flex crm-align-items-center crm-justify-content-center"
+      *ngFor="let item of dayOfWeek"
+    >
+      <div class="day-title">{{ item }}</div>
+    </div>
+  </div>
+  <div
+    class="calendar crm-flex crm-flex-row crm-justify-content-center"
+    *ngFor="let week of calendar"
+  >
+    <div
+      class="dayofweek crm-flex crm-align-items-center crm-justify-content-center"
+      *ngFor="let item of week.days"
+    >
+      <div
+        class="date-title"
+        (click)="clickDate(item)"
+        tabindex="1"
+        (keyup)="keypressDate($event)"
+        [ngClass]="{
+          hide: item == '',
+          thisday: item == selectedDay,
+          today: item == today
+        }"
+      >
+        {{ item }}
+      </div>
+    </div>
+
+    <!-- <div class="dayofweek" *ngFor="let item of date">
+    <div class="day-title">{{ item }}</div>
+    <div class="date-title"></div>
+    <div class="info crm-flex crm-flex-row crm-justify-content-center ">
+      <div class="btn-click primary">3</div>
+      <div class="btn-click red">2</div>
+      <div class="btn-click secondary">4</div>
+    </div>
+  </div> -->
+  </div>
+</div>

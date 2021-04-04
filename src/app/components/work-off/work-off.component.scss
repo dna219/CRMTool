@@ -1,0 +1,89 @@
+@import "../../../assets/color";
+
+.calendar {
+  margin: 20px;
+  // height: 400px;
+  // border-left: 1px solid #ccc;
+}
+.month {
+  display: flex;
+  font-size: 24px;
+  color: #aeaeae;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  justify-self: center;
+}
+
+.dayofweek {
+  min-width: 70px;
+  height: 30px;
+  border: 0px solid #ccc;
+  border-left: 0;
+  margin: 0px 2px;
+  display: flex;
+  color: #aeaeae;
+  justify-content: center;
+  // border-top-left-radius: 20px;
+  // border-top-right-radius: 20px;
+  // border-bottom-left-radius: 20px;
+  // border-bottom-right-radius: 20px;
+}
+
+.day-title {
+  font-size: 18px;
+  color: #5e5e5e;
+}
+.date-title {
+  width: 36px;
+  height: 36px;
+  // border: 1px solid #ccc;
+  color: #aeaeae;
+  text-align: center;
+  line-height: 36px;
+  font-size: 16px;
+  font-weight: 500;
+  outline: 0;
+
+  &:hover {
+    border-radius: 50%;
+    color: #fff;
+    background: $app-color-opacity;
+    cursor: pointer;
+  }
+}
+
+.hide {
+  display: none;
+}
+.thisday {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #fff;
+  background: $app-color !important;
+  cursor: pointer;
+}
+.today {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #fff;
+  background: $border-color;
+  cursor: pointer;
+}
+.info {
+  background: #eeeeee;
+}
+
+.toolbar {
+  background: $app-color;
+  width: 100%;
+  height: 32px;
+  margin-bottom: 10px;
+  color: #fff;
+  .item {
+    font-size: 13px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+}
